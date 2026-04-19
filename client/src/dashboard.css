@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 190px;
+  background-color: #ffffff;
+  padding: 15px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.sidebar h2 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.sidebar button {
+  width: 140px;
+  height: 45px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin: 10px 0;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidebar button:hover {
+  background-color: #ff8819;
+  box-shadow: 0px 15px 20px #ff8819;
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.sidebar select {
+  width: 140px;
+  height: 45px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar select:hover {
+  background-color: #1ad295;
+  box-shadow: 0px 15px 20px #1ad295;
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.logout {
+  margin-top: 350px;
+  background-color: #ff8819;
+  color: #fff;
+}
+
+.main {
+  flex: 1;
+  background-color: #C4CAD9;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.search-bar input {
+  padding: 8px 12px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.content {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.table-section, .projects-section, .chart, .calendar {
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.table-section {
+  width: 750px;
+  height: 230px;
+}
+
+.projects-section {
+  width: 740px;
+  height: 357px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.project-card {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.status {
+  border-radius: 5px;
+  text-align: center;
+  font-size: small;
+}
+
+.status.approved {
+  color: #109618;
+  background-color: #d0fee5;
+}
+
+.status.progress {
+  color: #3366cc;
+  background-color: #e1eeed;
+}
+
+.status.hold {
+  color: #dc3912;
+  background-color: #fac1ad;
+}
+
+.status.pending {
+  color: #ff9900;
+  background-color: #fff1aa;
+}
+
+.chart {
+  width: 450px;
+  height: 288px;
+  position: relative;
+}
+
+.calendar {
+  width: 450px;
+  height: 297px;
+}
+
+.top-image {
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.user-info img {
+  border-radius: 50%;
+  margin-left: 10px;
+}

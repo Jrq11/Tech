@@ -1,0 +1,19 @@
+.top-image1 {
+  position: absolute;
+  top: 26.5%;
+  left: 535px;
+}
+
+.top-image2 {
+  position: absolute;
+  top: 15%;
+  left: 526px;
+}
+
+.form-box {
+  display: none;
+}
+
+.form-box.active {
+  display: block;
+}

@@ -1,0 +1,65 @@
+.notif-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.notif-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 500px;
+  max-width: 90%;
+}
+.notif-content input[type="text"],
+.notif-content input[type="date"],
+.notif-content input[type="file"] {
+  width: 90%;         /* Make input stretch to container width */
+  padding: 10px;        /* Add space inside the input */
+  font-size: 14px;      /* Adjust text size */
+  height: 40px;         /* Control height */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background: white;
+}
+
+
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.upload-btn {
+  background: #10cf36;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: #e74c3c;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
