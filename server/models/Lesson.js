@@ -6,9 +6,9 @@ const lessonSchema = new mongoose.Schema({
   book: { type: mongoose.Schema.Types.ObjectId, ref: 'Book', required: true },
   createdAt: { type: Date, default: Date.now },
   file: {
-  data: Buffer,               // actual file content
-  contentType: String,        // e.g. "application/pdf"
-  fileName: String            // optional: for download/display
+  data: Buffer,               
+  contentType: String,       
+  fileName: String            
 }
 });
 

@@ -9,7 +9,7 @@ const jwt = require('jsonwebtoken');
 const multer = require('multer');
 
 
-const storage = multer.memoryStorage(); // 📌 memory, not disk
+const storage = multer.memoryStorage(); 
 const upload = multer({ storage: multer.memoryStorage() });
 
 
@@ -29,14 +29,14 @@ mongoose.connect(process.env.MONGO_URI, {
   });
 }).catch((err) => console.error("MongoDB connection error:", err));
 
-/* ---------- ROUTES ---------- */
 
-// ✅ Test route
+
+//  Test route
 app.get('/api/message', (req, res) => {
   res.json({ message: "Hello from server!" });
 });
 
-// ✅ Register API
+//  Register API
 app.post('/api/register', async (req, res) => {
   try {
     const { name, last, email, password, role } = req.body;
@@ -59,7 +59,7 @@ app.post('/api/register', async (req, res) => {
   }
 });
 
-// ✅ Login API
+//  Login API
 app.post('/api/login', async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -81,18 +81,6 @@ app.post('/api/login', async (req, res) => {
   }
 });
 
-/*const authenticateToken = (req, res, next) => {
-  const authHeader = req.headers['authorization'];
-  const token = authHeader && authHeader.split(' ')[1]; // "Bearer TOKEN"
-
-  if (!token) return res.sendStatus(401);
-
-  jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
-    if (err) return res.sendStatus(403);
-    req.user = user; // contains { id, email }
-    next();
-  });
-};*/
 
 app.get('/api/books', async (req, res) => {
   try {
@@ -104,10 +92,10 @@ app.get('/api/books', async (req, res) => {
 });
 
 
-// GET /api/lessons
+
 app.get('/api/lessons', async (req, res) => {
   try {
-    const lessons = await Lesson.find().populate('book'); // 👈 this adds the book data
+    const lessons = await Lesson.find().populate('book'); //  this adds the book data
     res.json(lessons);
   } catch (err) {
     console.error(err);
@@ -134,10 +122,10 @@ app.get('/api/books/:bookId/lessons', async (req, res) => {
 
 
 
-// ✅ Create Book (no file upload)
+
 app.post('/api/books', async (req, res) => {
   try {
-    // No need to attach user anymore
+
     const bookData = { ...req.body };
 
     const book = await Book.create(bookData);
@@ -166,7 +154,6 @@ app.post('/api/books', async (req, res) => {
 });
 
 
-// PUT /api/lessons/:lessonId/upload
 app.put('/api/lessons/:lessonId/upload', upload.single('file'), async (req, res) => {
   try {
     const lesson = await Lesson.findById(req.params.lessonId);
